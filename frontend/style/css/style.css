@@ -7,14 +7,197 @@
 
 
 
-.sneaker-details {
-    max-width: 600px;
-    margin: 50px auto;
-    padding: 20px;
+
+/* NAVBAR */
+
+/* CSS pour le header */
+
+/* Style général */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    flex: 1;
+}
+
+.logo img {
+    width: 150px;
+    height: auto;
+}
+
+nav {
+    flex: 2;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+li {
+    margin: 20px;
     
-    background-color: #fff;
+}
+
+.search-bar {
+    flex: 2;
+    text-align: center;
+}
+
+.profile-tab {
+    flex: 1;
+    text-align: right;
+}
+
+.profile-tab a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.profile-tab a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+/*Favoris*/
+
+#fav-description{
+    display: flex;
+    justify-content: space-between  ;
+    align-items: center;
+}
+
+#favoris{
+    display: flex;
+    margin-top: 10px;
+}
+
+#add-to-favorites {
+    background-color: #4CAF50;
+}
+#add-to-favorites, #remove-from-favorites {
+    border: none;
+    color: white;
+    padding: 7px;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#add-to-favorites img{
+    width: 30px;
+    height: 30px;
+}
+
+#remove-from-favorites img{
+    width: 30px;
+    height: 30px;
+}
+
+#remove-from-favorites {
+    background-color: #f44336; 
+}
+
+.remove-from-favorites img{
+    width: 10px;
+    height: 30px;
+}
+
+.remove-from-favorites {
+    background-color: #f44336; 
+    border: none;
+    color: white;
+    padding: 7px;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+#favorites-list {
+    margin: 20px auto;
+    max-width: 600px;
+    padding: 0 20px;
+}
+
+
+.favorite-item {
+    background-color: #fff;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.favorite-item h2 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.favorite-item p {
+    margin: 0;
+}
+
+
+.remove-from-favorites {
+    background-color: #ff4d4d;
+    color: #fff;
+    border: none;
+   height: 50px;
+   width: 40px;
+
+    padding: 5px ;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.remove-from-favorites:hover {
+    background-color: #cc0000;
+}
+
+
+#clear-favorites {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #52a6ff;
+    color: #fff;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color, transform 0.3s ease;
+}
+
+#clear-favorites:hover {
+    background-color: #4177af;
+    transform: scale(1.05);
+}
+
+.cut {
+    border-top: 1px solid #ccc;
+    
+}
+
+.space{
+    display: flex;
+    justify-content: space-between  ;
+    align-items: center;
+
 }
 
 h2 {
@@ -35,6 +218,58 @@ p {
     font-size: 16px;
     margin-bottom: 5px;
 }
+
+.sneakers-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.sneaker-item {
+    margin: 50px auto;
+    box-sizing: border-box;
+    width: 600px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.sneaker-item h3 {
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.sneaker-item:hover {
+    transform: translateY(-5px);
+}
+
+.sneaker-item p {
+    margin: 0;
+    font-size: 18px;
+}
+
+.sneaker-item img {
+    width: 100%;
+    max-width: 700px;
+    display: block;
+    margin: 0 auto;
+  
+    border-radius: 8px;
+    
+}
+
+.sneaker-details {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
 
 #sneaker-img {
     display: block;
@@ -65,35 +300,13 @@ p {
     transform: scale(1.05);
 }
 
-
-
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f9fa;
+    background-color: #f0f0f0;
 }
 
-#sneakerList {
-    list-style: none;
-    padding: 0;
-    margin: 20px auto;
-    max-width: 800px;
-}
-
-li {
-    background-color: #fff;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease;
-}
-
-li:hover {
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
-}
 
 strong {
     font-size: 24px;
@@ -117,10 +330,34 @@ img:hover {
     transform: scale(1.05);
 }
 
+.btn-fav {
+    display: block;
+    
+    margin: 20px auto;
+    text-align: center;
+    padding: 7px;
+     font-size: 20px;
+     height: 35px;
+     background-color: rgb(0, 164, 0);
+     color: #fff;
+     border: none;
+     border-radius: 5px;
+     cursor: pointer;
+     text-decoration: none;
+     transition: background-color, transform 0.3s ease;
+}
+
+.btn-fav:hover {
+    transform: scale(1.03);
+    background-color: rgb(0, 86, 0);
+}
+
 .btn {
     display: block;
-    margin: 20px auto;
-    padding: 0 20px;
+  
+   margin: 20px auto;
+   text-align: center;
+   padding: 7px;
     font-size: 20px;
     height: 35px;
     background-color: #007bff;
@@ -132,6 +369,20 @@ img:hover {
 }
 
 .btn:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
     background-color: #0056b3;
+}
+
+#home-link {
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#home-link img {
+    width: 30px;
+    height: 30px;
 }
